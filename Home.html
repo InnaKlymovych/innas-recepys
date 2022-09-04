@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Inna´s recipes</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+      <logo>
+         <a href="/home.html"><img src="/Images/Logo.png" alt="Logo"></a>
+      </logo>
+      <div class="nav">
+         <ul>
+            <li><a href="/Especial.html">Especial</a></li>
+            <li><a href="/Salad.html">Salad</a></li>
+            <li><a href="/Soup.html">Soup</a></li>
+            <li><a href="/Meat.html">Meat</a></li>
+            <li><a href="/Fish.html">Fish</a></li>
+            <li><a href="/Veggys.html">Veggys</a></li>
+         </ul>
+      </div>
+      
+   </header>
+   <main>
+      <div class="about">
+         <img src="/Images/main.png" alt="Main">
+         <div class="about-right">
+            <h2>Lets make our dishes better together</h2>
+            <div class="line"></div>
+         </div>
+      </div>
+      <p>Hi. My name is Inna. Im from Ukraine. In 2010 i move to Portugal . <br> So i tried many diferents kitchens . 
+         And I love to cook . Lets me <br> introduse my favorite dishes . You will love it too. 
+      </p>
+      <div class="login-page">
+         <div class="form">
+            <form class="register-form">
+               <input type="text" placeholder="user name">
+               <input type="email" placeholder="email">
+               <input type="password" placeholder="password">
+               <button>Create</button>
+               <p class="message">Already Registered? <a href="#">Login</a></p>
+            </form>
+
+            <form class="login-form">
+               <input type="text" placeholder="user name">
+               <input type="password" placeholder="password">
+               <button>Login</button>
+               <p class="message">Not Registered? <a href="#">Register</a></p>
+            </form>
+         </div>
+      </div>
+      <div class="dishes">
+         <a href="/Especial.html"><img src="/Images/borscht-home.jpg" alt="1"></a>
+         <a href=""><img class="midlle" src="/Images/images.jpg" alt="2"></a>
+         <a href=""><img src="/Images/pizza-home.jpg" alt="3"></a>
+      </div>
+      
+   </main>
+   <footer>
+      <p>Inna Klymovych  Loule  2022</p>
+   </footer>
+
+   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+   <script>
+      $('.message a').click(function(){
+         $('form').animate({height:"toggle", opacity:"toggle"}, "slow");
+      });
+
+   </script>
+</body>
+</html>
+

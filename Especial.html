@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Inna´s recipes</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+      <logo>
+         <a href="/home.html"><img src="/Images/Logo.png" alt="Logo"></a>
+      </logo>
+      <div class="nav">
+         <ul>
+            <li><a href="/Especial.html">Especial</a></li>
+            <li><a href="/Salad.html">Salad</a></li>
+            <li><a href="/Soup.html">Soup</a></li>
+            <li><a href="/Meat.html">Meat</a></li>
+            <li><a href="/Fish.html">Fish</a></li>
+            <li><a href="/Veggys.html">Veggys</a></li>
+         </ul>
+      </div>
+      
+   </header>
+   <main>
+      <div class="about-especial">
+         <div class="about-especial-left">
+            <img src="/Images/borscht-home.jpg" alt="borsch">
+         </div>
+         <div class="about-especial-right">
+            <h2>Borsch</h2>
+            <p>In 2022, the United Nations Educational, Scientific,
+               and Cultural Organization (UNESCO) announced that
+               it had placed borscht on the List of Intangible Cultural Heritage in Need of Urgent Safeguarding
+               due to the risk that russia's invasion posed to the soup's status as an element of Ukraine's cultural 
+               heritage. The new status means Ukraine could now apply
+               for special funds to finance projects promoting and protecting the dish.
+            </p>
+         </div>
+      </div>
+   
+      <div class="tab-titles">
+         <p class="tab-links active-link" onclick="opentab('time')">Cooking time</p>
+         <p class="tab-links" onclick="opentab('ingredience')">Ingredience</p>
+         <p class="tab-links" onclick="opentab('method')">Method</p>
+      </div>
+      <div class="tab-contents active-tab" id="time">
+         <ul>
+            <li><span>Prep Time</span> <br> 20 min</li>
+            <li><span>Cook Time</span> <br> 40min</li>
+            <li><span>Total Time</span> <br> 1 hour</li>
+         </ul>
+      </div>
+      <div class="tab-contents" id="ingredience">
+         <ul>
+            <li> 3 teaspoons vegetable oil</li>
+            <li> 1 (1 1/4 pound) section bone-in beef shank with a lot of meat, or 1 pound beef stew meat, excess fat trimmed</li>
+            <li> 1 large onion, chopped (about 1 1/2 cups)</li>
+            <li> 4 large beets (about 1 1/2 pounds), peeled and grated</li>
+            <li> 2 carrots (1 pound), peeled and grated</li>
+            <li> 8 larges potatos , peeled and cut cubes</li>
+            <li> 2 cups thinly sliced cabbage</li>
+            <li> 3/4 cup chopped fresh dill, divided</li>
+            <li> 3 tablespoons red wine vinegar</li>
+            <li> 1 tbl spoon tomato pure</li>
+            <li> 1 bay leaf</li>
+            <li> 100 gr of choped mushrooms</li>
+            <li> 1/2 of red pepper , chopped</li>
+            <li> 1 cup sour cream</li>
+            <li> 100 gr dill</li>
+            <li> Salt and freshly ground black pepper to taste</li>
+            <li> Sliced and salted pork belly , sliced onion and fresh bread to served with</li>
+         </ul>
+      </div>
+      <div class="tab-contents" id="method">
+         <h3>Here is a quick rundown of how to cook borscht.</h3>
+         <ul>
+
+            <li>Prep veggies: You want to start with cabbage first because it takes the longest time to cook. While cabbage is cooking, you can prep other veggies for borscht.</li>
+            <li>Cook cabbage in broth with bay leaves and peppercorns for 20 minutes after bringing to a boil. Chop beets, potatoes, carrots and onion in the meanwhile.</li>
+            <li>Saute onion and carrots in a bit of olive oil until translucent, about 5 minutes. This makes onion flavorful making entire borscht recipe more delicious. Do not skip.</li>
+            <li>Then add beets and a bit more oil, cook for another 5 minutes.</li>
+            <li>Transfer sauteed veggies to the pot along with potatoes, tomato paste and salt. Cook covered for 20 minutes. In the meantime, prep garlic, dill and other seasonings.</li>
+            <li>Season borscht with vinegar, garlic, sugar and pepper. Stir, turn off heat and let borscht soup stand for 10 minutes covered to allow flavors to “marry” each other. Add dill and your borscht recipe is ready to serve.</li>
+         
+         </ul>
+      </div>
+      <div class="container-borsch"> 
+         <img class="borsch2" src="/Images/borsch-especial.jpg" alt="borsch">
+         <h3>Bom apetite.</h3>
+      </div>
+      
+   </main>
+   <footer>
+      <p>Inna Klymovych  Loule  2022</p>
+   </footer>
+   <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+   
+      function opentab(tabname){
+         for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+         }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab");
+      }
+   </script>
+</body>
+</html>

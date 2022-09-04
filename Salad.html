@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Inna´s recipes</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+   <logo>
+      <a href="/home.html"><img src="/Images/Logo.png" alt="Logo"></a>
+   </logo>
+   <div class="nav">
+      <ul>
+         <li><a href="/Especial.html">Especial</a></li>
+         <li><a href="/Salad.html">Salad</a></li>
+         <li><a href="/Soup.html">Soup</a></li>
+         <li><a href="/Meat.html">Meat</a></li>
+         <li><a href="/Fish.html">Fish</a></li>
+         <li><a href="/Veggys.html">Veggys</a></li>
+      </ul>
+   </div>
+   
+</header>
+<main>
+   
+      <div class="about-salad">
+         <div class="about-salad-left">
+            <img class="salad" src="/Images/beet-salad.jpg" alt="salad">
+         </div>
+         <div class="about-salad-right">
+            <h2>Vegan beetroot pasta salad with green  lentils</h2>
+            <p>You can serve this pasta salad for a dinner or lunch that's ready in around 15 minutes. 
+               It's also super meal prep friendly, and you can enjoy it either hot or cold. 
+               If you prefer cold pasta salads, simply leave it in the fridge for 20 minutes before serving, and you're good to go!</p>
+         </div>
+      </div>
+   
+      <div class="tab-salad-titles">
+         <p class="tab-salad-links active-salad-link" onclick="opensaladtab('time-salad')">Time</p>
+         <p class="tab-salad-links" onclick="opensaladtab('ingredience-salad')">Ingredience</p>
+         <p class="tab-salad-links" onclick="opensaladtab('method-salad')">Method</p>
+      </div>
+      <div class="tab-salad-contents active-salad-tab" id="time-salad">
+         <ul>
+            <li><span>Prep Time</span> <br> 10 min</li>
+            <li><span>Cook Time</span> <br> 10min</li>
+            <li><span>Total Time</span> <br> 20 min</li>
+         </ul>
+      </div>
+      <div class="tab-salad-contents" id="ingredience-salad">
+         <ul>
+            <li>Tomatoes</li>
+            <li>Onion</li>
+            <li>Zucchini</li>
+            <li>Arugula</li>
+            <li>Cauliflower</li>
+            <li> Tamari. You can replace this with soy sauce if not avoiding gluten, and coconut aminos for a soy-free version.</li>
+            <li> Balsamic vinegar.</li>
+            <li> Maple syrup.</li>
+            <li> Almond butter. Or any other nut butter of your choice.</li>
+            <li> Cooked beetroot.</li>
+
+         </ul>
+      </div>
+      <div class="tab-salad-contents" id="method-salad">
+         <h3>How to make a green lentil pasta salad.</h3>
+         <ul>
+
+            <li>Firstly, cook the pasta according to packaging instructions, draining and rinsing when it's done.</li>
+            <li>Use this time to prepare the dressing by adding the tamari, balsamic vinegar, maple syrup, almond butter and beetroot to a blender or food processor and blending until smooth.</li>
+            <li>Also prepare the vegetables. Dice the tomatoes, onion, zucchini and cauliflower.</li>
+            <li>When the pasta is ready, transfer it to a large mixing bowl together with the vegetables, cooked green lentils and the sauce. Mix together and serve either immediately, or after leaving to chill in the fridge.</li>
+            <li>The final vegan beetroot pasta salad is... </li>
+            <li>Tangy and nutty, with plenty of freshness from the vegetables.</li>
+            <li>Ready in under 15 minutes and pretty much effortless: perfect if you’re in a rush or want a quick, healthy midweek dinner.</li>
+            <li>Meal prep friendly: you can leave it in the fridge for 3-4 days in an airtight container.</li>
+            <li>Gluten-free, as long as you use gluten-free pasta.</li>
+            <li>Great as both a side and a main dish.</li>
+            
+         </ul>
+      </div>
+      <div class="container-salad"> 
+         <img class="salad2" src="/Images/beet-salad2.jpg" alt="salad">
+         <h3>Bom apetite.</h3>
+      </div>
+   
+</main>
+<footer>
+   <p>Inna Klymovych  Loule  2022</p>
+</footer>
+<script>
+   var tabsaladlinks = document.getElementsByClassName("tab-salad-links");
+   var tabsaladcontents = document.getElementsByClassName("tab-salad-contents");
+
+   function opensaladtab(tabname){
+      for(tabsaladlink of tabsaladlinks){
+         tabsaladlink.classList.remove("active-salad-link");
+      }
+      for(tabsaladcontent of tabsaladcontents){
+         tabsaladcontent.classList.remove("active-salad-tab");
+      }
+      event.currentTarget.classList.add("active-salad-link");
+      document.getElementById(tabname).classList.add("active-salad-tab");
+   }
+</script>
+</body>
+</html>

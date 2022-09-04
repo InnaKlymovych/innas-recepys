@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Inna´s recipes</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+   <logo>
+      <a href="/home.html"><img src="/Images/Logo.png" alt="Logo"></a>
+   </logo>
+   <div class="nav">
+      <ul>
+         <li><a href="/Especial.html">Especial</a></li>
+         <li><a href="/Salad.html">Salad</a></li>
+         <li><a href="/Soup.html">Soup</a></li>
+         <li><a href="/Meat.html">Meat</a></li>
+         <li><a href="/Fish.html">Fish</a></li>
+         <li><a href="/Veggys.html">Veggys</a></li>
+      </ul>
+   </div>
+   
+</header>
+<main>
+   <main>
+   
+      <div class="about-soup">
+         <div class="about-soup-left">
+            <img class="soup" src="/Images/soup1.jpg" alt="soup">
+         </div>
+         <div class="about-soup-right">
+            <h2>White bean tomato soup</h2>
+            <p>This White Bean Tomato Soup is packed with flavor and is so easy to make. Full of fire-roasted tomatoes, veggies and white beans, it makes the perfect healthy weeknight meal that's ready in about 30 minutes! With all those veggies,
+               it's comfort food that both vegans and omnivores will love!</p>
+         </div>
+      </div>
+   
+      <div class="tab-soup-titles">
+         <p class="tab-soup-links active-soup-link" onclick="opensouptab('time-soup')">Time</p>
+         <p class="tab-soup-links" onclick="opensouptab('ingredience-soup')">Ingredience</p>
+         <p class="tab-soup-links" onclick="opensouptab('method-soup')">Method</p>
+      </div>
+      <div class="tab-soup-contents active-soup-tab" id="time-soup">
+         <ul>
+            <li><span>Prep Time</span> <br> 10 min</li>
+            <li><span>Cook Time</span> <br> 25min</li>
+            <li><span>Total Time</span> <br> 35 min</li>
+         </ul>
+      </div>
+      <div class="tab-soup-contents" id="ingredience-soup">
+         <ul>
+            <li>1 tablespoon  olive oil.</li>
+            <li>1 large onion finely chopped.</li>
+            <li>2 ribs of celery finely chopped.</li>
+            <li>5 cloves garlic finely chopped.</li>
+            <li>1 teaspoon smoked paprika or chipotle powder.</li>
+            <li> .5 teaspoon cumin.</li>
+            <li> .25 cup tomato paste.</li>
+            <li> 27 oz canned chopped fire roasted tomatoes.</li>
+            <li> 2 teaspoon salt plus more to taste.</li>
+            <li> .5 teaspoon black pepper.</li>
+            <li> 3 cups vegetable broth/stock.</li>
+            <li> 1 tablespoon cane or granulated white sugar.</li>
+            <li> 4.5 cups white kidney, cannellini or lima beans drained and rinse.</li>
+
+         </ul>
+      </div>
+      <div class="tab-soup-contents" id="method-soup">
+         <h3>Instructions.</h3>
+         <ul>
+
+            <li>In a large skillet, heat the olive oil over medium heat. Sauté the onion and celery for about 10 minutes, until they are starting to go golden brown.</li>
+            <li>Add the garlic, smoked paprika and cumin and continue to cook for another 2 minutes, stirring constantly. </li>
+            <li>Then add all the other ingredients.</li>
+            <li>Stir well to combine, allow to come to a simmer and cook for another 20 minutes.</li>
+            <li>Add a little water to adjust the consistency to your liking,check the seasoning and adjust to taste; then serve. </li>
+            <li>I like the soup chunky,but you can use an immersion blender right in the pan to make it smoother and creamier, if you want to.</li>
+            <li>Make this soup with only 11/2 to 2 cups (360 to 480 ml) of stock instead of 3 cups (720 ml),so it’s more like a thick stew, and serve it over rice, quinoa or couscous.</li>
+            
+         </ul>
+      </div>
+      <div class="container-soup"> 
+         <img class="soup2" src="/Images/soup2.jpg" alt="soup">
+         <h3>Bom apetite.</h3>
+      </div>
+   
+</main>
+</main>
+<footer>
+   <p>Inna Klymovych  Loule  2022</p>
+</footer>
+<script>
+   var tabsouplinks = document.getElementsByClassName("tab-soup-links");
+   var tabsoupcontents = document.getElementsByClassName("tab-soup-contents");
+
+   function opensouptab(tabname){
+      for(tabsouplink of tabsouplinks){
+         tabsouplink.classList.remove("active-soup-link");
+      }
+      for(tabsoupcontent of tabsoupcontents){
+         tabsoupcontent.classList.remove("active-soup-tab");
+      }
+      event.currentTarget.classList.add("active-soup-link");
+      document.getElementById(tabname).classList.add("active-soup-tab");
+   }
+</script>
+</body>
+</html>
